@@ -75,26 +75,26 @@ video_summarization/
 - git clone https://github.com/hakazmi/Video-Analysis-Summarization.git
 - cd Video-Analysis-Summarization
 
-# Create virtual environment
+### Create virtual environment
 - python -m venv venv
 - source venv/bin/activate  # (On Windows: venv\Scripts\activate)
 
-# Install dependencies
+### Install dependencies
 - pip install -r requirements.txt
 
-# Run backend (FastAPI):
+### Run backend (FastAPI):
 - uvicorn main:app --host 0.0.0.0 --port 8000
   
-# Run frontend (Streamlit):
+### Run frontend (Streamlit):
 - streamlit run app.py --server.port 8501
 ###    3. Run with Docker (Recommended)
-# Build the image
+### Build the image
 - docker build -t video-summarizer .
 
-# Run container
+### Run container
 - docker run -p 8000:8000 -p 8501:8501 --env-file .env video-summarizer
 
-  # Now access:
+  ### Now access:
 - Backend: http://localhost:8000/docs
 - Frontend: http://localhost:8501
 
